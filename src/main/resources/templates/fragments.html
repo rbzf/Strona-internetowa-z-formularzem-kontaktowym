@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragments</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+</head>
+<body>
+<header th:fragment="common-header">
+  <h1>Agencja nieruchomosci DOMEK</h1>
+    <img src="../static/Real_Estate_(101).jpg" width="50" th:src="@{Real_Estate_(101).jpg}" alt="logo">
+</header>
+
+<footer th:fragment="common-footer">
+  Agencja nieruchomosci &copy;2023
+</footer>
+
+</body>
+</html>
