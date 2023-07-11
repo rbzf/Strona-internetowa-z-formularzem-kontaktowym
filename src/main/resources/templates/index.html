@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona glowna</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+<header th:insert="~{fragments::common-header}"></header>
+<p>Chcesz sprzedac, kupic lub wynajac nieruchomosc, skontaktuj sie z nami:</p>
+<a th:href="@{/contact}">formularz kontaktowy</a>
+<footer th:insert="~{fragments::common-footer}"></footer>
+</body>
+</html>
