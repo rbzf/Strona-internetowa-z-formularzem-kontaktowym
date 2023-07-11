@@ -14,13 +14,17 @@ public class EmailService {
         this.javaMailSender = javaMailSender;
     }
 
-    public void sendMail(String receiver, String sender, String subject, String text){
+    public void sendMail(String replyTo, String content) {
 
         SimpleMailMessage mail = new SimpleMailMessage();
-        mail.setTo(receiver);
+        String sender = "rbzf@mail.com";
         mail.setFrom(sender);
+        String receiver = "rbzf@mail.com";
+        mail.setTo(receiver);
+        mail.setReplyTo(replyTo);
+        String subject = "wiadomosc z formularza kontaktowego";
         mail.setSubject(subject);
-        mail.setText(text);
+        mail.setText(content);
         javaMailSender.send(mail);
     }
 }
